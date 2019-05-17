@@ -1,0 +1,23 @@
+#coding=utf8
+'''
+Created on 2019年5月15日
+
+@author: 82114
+'''
+from preprocessing import preprocessing
+from models import simplenet,resnet34
+from train import train
+from evaluation import evaluation
+
+
+if __name__ == '__main__':
+    pr = preprocessing.Preprocessing()
+    #net = simplenet.Net()
+    net = resnet34.ResNet34(10)
+    tr = train.Train(net,pr)
+    ev = evaluation.Evaluation(net,pr)
+    
+    
+    
+
+    

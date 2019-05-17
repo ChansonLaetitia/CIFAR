@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//evaluation/__init__.py=utf8
+encoding//evaluation/evaluation.py=utf8
+encoding//models/__init__.py=utf8
+encoding//models/basic_module.py=utf8
+encoding//models/resnet34.py=utf8
+encoding//models/simplenet.py=utf8
+encoding//preprocessing/__init__.py=utf8
+encoding//preprocessing/cutout.py=utf8
+encoding//preprocessing/preprocessing.py=utf8
+encoding//train/__init__.py=utf8
+encoding//train/train.py=utf8
+encoding/main.py=utf8
+encoding/test.py=utf8
