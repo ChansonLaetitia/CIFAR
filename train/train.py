@@ -11,7 +11,7 @@ class Train():
     def __init__(self,net,pr):
         
         criterion = nn.CrossEntropyLoss() # 交叉熵损失函数
-        optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9) #新建一个优化器，指定要调整的参数和学习率
+        optimizer = optim.SGD(net.parameters(), lr=0.01, momentum=0.9, weight_decay=5e-4) #优化方式为mini-batch momentum-SGD，并采用L2正则化（权重衰减）
         #t.set_num_threads(8)
         for epoch in range(2):  
             
@@ -36,8 +36,8 @@ class Train():
                 # 打印log信息
                 # loss 是一个scalar,需要使用loss.item()来获取数值，不能使用loss[0]
                 running_loss += loss.item()
-                if i % 200 == 199: # 每2000个batch打印一下训练状态
+                if i % 500 == 499: # 每2000个batch打印一下训练状态
                     print('[%d, %5d] loss: %.3f' \
-                          % (epoch+1, i+1, running_loss / 200))
+                          % (epoch+1, i+1, running_loss / 500))
                     running_loss = 0.0
         print('Finished Training')
