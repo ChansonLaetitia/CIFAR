@@ -9,6 +9,8 @@ import torch as t
 class Evaluation():
     def __init__(self,net,pr):
         
+        print ("Evaluate....")
+        
         dataiter = iter(pr.testloader)
         images, labels = dataiter.next() # 一个batch返回4张图片
         print('实际的label: ', labels)
@@ -37,5 +39,6 @@ class Evaluation():
                 
         print (total)
         print('10000张测试集中的准确率为: %d %%' % (100 * correct / total))
+    
         
         

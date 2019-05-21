@@ -9,6 +9,7 @@ from models import simplenet,resnet34,resnet18
 from train import train
 from evaluation import evaluation
 
+EPOCH = 150
 
 
 if __name__ == '__main__':
@@ -16,7 +17,10 @@ if __name__ == '__main__':
     #net = simplenet.Net()
     #net = resnet34.ResNet34(10)
     net = resnet18.ResNet18()
+    
     tr = train.Train(net,pr)
+    tr(EPOCH)
+    
     ev = evaluation.Evaluation(net,pr)
     
     

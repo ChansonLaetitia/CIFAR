@@ -15,9 +15,9 @@ class Preprocessing(object):
     def __init__(self):
         # 定义对数据的预处理
         transform_train = T.Compose([
-                #T.RandomCrop(32, padding=4),
+                T.RandomCrop(32, padding=4),
                 #cutout.Cutout(6),
-                #T.RandomHorizontalFlip(),
+                T.RandomHorizontalFlip(),
                 T.ToTensor(), # 转为Tensor
                 T.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)), # 归一化
                                      ])
@@ -36,7 +36,7 @@ class Preprocessing(object):
         
         self.trainloader = t.utils.data.DataLoader(
                             trainset, 
-                            batch_size=4,
+                            batch_size=8,
                             shuffle=True, 
                             num_workers=2)
         
@@ -49,7 +49,7 @@ class Preprocessing(object):
         
         self.testloader = t.utils.data.DataLoader(
                             testset,
-                            batch_size=4, 
+                            batch_size=8, 
                             shuffle=False,
                             num_workers=2)
         
