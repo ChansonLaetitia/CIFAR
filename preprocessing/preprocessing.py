@@ -20,11 +20,13 @@ class Preprocessing(object):
                 T.RandomHorizontalFlip(),
                 T.ToTensor(), # 转为Tensor
                 T.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)), # 归一化
+                #T.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
                                      ])
         
         transform_test = T.Compose([
                 T.ToTensor(), # 转为Tensor
                 T.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)), # 归一化
+                #T.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
                                      ])
         
         # 训练集

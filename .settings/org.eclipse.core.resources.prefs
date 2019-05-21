@@ -3,6 +3,7 @@ encoding//evaluation/__init__.py=utf8
 encoding//evaluation/evaluation.py=utf8
 encoding//models/__init__.py=utf8
 encoding//models/basic_module.py=utf8
+encoding//models/resnet18.py=utf8
 encoding//models/resnet34.py=utf8
 encoding//models/simplenet.py=utf8
 encoding//preprocessing/__init__.py=utf8
